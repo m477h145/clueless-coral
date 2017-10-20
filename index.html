@@ -1,17 +1,58 @@
 <!DOCTYPE HTML>
-  <html>
+  <html lang="en">
     <head>
-      <title>Website</tile>
-      <!--JS Imports go here-->
-        <script src="js/jquery-3.2.1.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.js"></script>
+      <title>Website</title>
       <!--CSS Imports go here-->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/colors.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
+      <!--JS Imports go here-->
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.js"></script>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-md sticky-top bg-grey">
+        <ul class="nav">
+          <li class="nav-item px-1">
+            <a class="btn btn-lg btn-pink" href="#"><i class="material-icons">home</i></a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="btn btn-lg btn-outline-cyan" href="#">Very long text</a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="btn btn-lg btn-outline-red" href="#">Text</a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="btn btn-lg btn-outline-warning" href="#">Text</a>
+          </li>
+        </ul>
+      </nav>
       <!--Here be content-->
+      <div class="container">
+        <div class="row">
+          <div class="card col-sm-6 px-1">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card col-sm-6 px-1">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer-->
+      <nav class="navbar navbar-expand-md fixed-bottom bg-dark">
+        <div class="">
+          <p class="text-muted">Made with <i class="material-icons">favorite</i> by Lauren, Jacob and Matthias</p>
+        </div>
+      </nav>
     </body>
   </html>
