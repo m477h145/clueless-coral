@@ -1,0 +1,63 @@
+Use https://www.materialpalette.com/colors for color selection.
+Primary should be 100 lighter than secondary color, e.g. 500 red - primary; 600 red secondary
+
+Paste the following into colors.css
+
+To replace:
+farbe1 - name of the color
+farbe2 - primary color's hex code
+farbe3 - secondary color hex code
+
+I used german for easier replacement aka. Ctrl+F
+
+
+/*Farbe1*/
+
+.bg-red {
+  background-color: #farbe2 !important;
+}
+
+a.bg-farbe1:focus, a.bg-farbe1:hover {
+  background-color: #farbe3 !important;
+}
+
+.btn-farbe1 {
+  color: #fff;
+  background-color: #farbe2;
+  border-color: #farbe2;
+}
+
+.btn-farbe1:hover {
+  color: #fff;
+  background-color: #farbe2;
+  border-color: #farbe3;
+}
+
+.btn-farbe1:focus, .btn-farbe1.focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.btn-farbe1.disabled, .btn-farbe1:disabled {
+  background-color: #farbe2;
+  border-color: #farbe2;
+}
+
+.btn-farbe1:active, .btn-farbe1.active,
+.show > .btn-farbe1.dropdown-toggle {
+  background-color: #farbe2;
+  background-image: none;
+  border-color: #farbe3;
+}
+
+.btn-outline-farbe1 {
+  color: #farbe2;
+  background-color: transparent;
+  background-image: none;
+  border-color: #farbe2;
+}
+
+.btn-outline-farbe1:hover {
+  color: #fff;
+  background-color: #farbe2;
+  border-color: #farbe2;
+}
