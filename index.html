@@ -14,9 +14,10 @@
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/popper.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
       <!--Navbar-->
-      <nav class="navbar navbar-expand-md sticky-top bg-grey">
-        <ul class="nav">
+      <nav class="navbar-expand sticky-top bg-grey">
+        <!--<ul class="nav">                      //Old version
           <li class="nav-item px-1">
             <a class="btn btn-lg btn-pink" href="#"><i class="material-icons">home</i></a>
           </li>
@@ -29,18 +30,18 @@
           <li class="nav-item px-1">
             <a class="btn btn-lg btn-outline-warning" href="#">Text</a>
           </li>
-        </ul>
+        </ul>-->
+        <div class="btn-group btn-group-lg" role="group">
+          <button type="button" href="#" class="btn btn-red"><i class="material-icons">home</i></button>
+          <button type="button" href="#" class="btn btn-outline-cyan">Very long text</button>
+          <button type="button" href="#" class="btn btn-outline-red">Text</button>
+          <button type="button" href="#" class="btn btn-outline-warning">Text</button>
+        </div>
       </nav>
       <!--Here be content-->
       <div class="container">
         <div class="row">
-          <div class="card col-sm-6 px-1">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card col-sm-6 px-1">
+          <div class="card col-6">
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -49,10 +50,9 @@
         </div>
       </div>
       <!--Footer-->
-      <nav class="navbar navbar-expand-md fixed-bottom bg-dark">
-        <div class="">
-          <p class="text-muted">Made with <i class="material-icons">favorite</i> by Lauren, Jacob and Matthias</p>
-        </div>
+      <nav class="navbar-expand fixed-bottom bg-dark">
+        <hr class="bg-pink">
+        <center><p class="text-muted">Made with </p><i class="material-icons text-muted">favorite</i><p class="text-muted"> by Lauren, Jacob and Matthias</p></center>
       </nav>
     </body>
   </html>
