@@ -7,6 +7,7 @@ var config = {
   storageBucket: "",
   messagingSenderId: "1007380280855"
 };
+
 firebase.initializeApp(config);
 
 // Functions
@@ -65,4 +66,8 @@ function display_post(key, parent) {
   '</div>';
   parent.appendChild(div);
   return null;
+}
+
+function remove_post(key) {
+  firebase.database().ref('posts/' + key).update(null);
 }
