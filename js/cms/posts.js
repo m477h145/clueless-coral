@@ -22,8 +22,10 @@ function write_post(title, text, club, picture) {
 function read_post(key) {
   var post;
   firebase.database().ref('posts/' + key).once('value').then(function(snapshot) {
-    post = snapshot.val()
+    post = snapshot.val();
+    //console.log(post);
   });
+  //console.log(post);
   return post;
 }
 
@@ -51,9 +53,9 @@ function display_post(key, parent) {
   post = read_post(key);
   div = document.createElement('div');
   div.innerHTML = '<div class="card text-white bg-primary mb-3" style="max-width: 33.333333%;">' +
-  '<div class="card-header">' + post.club ' / ' + post.teacher + '</div>';
+  '<div class="card-header">' + post.club + ' / ' + post.teacher + '</div>';
   if (post.picture !== null) {
-    div.innerHTML += '<img class="card-img-top" src="' + post.picture + '" alt=""' post.title ' / Image"">';
+    div.innerHTML += '<img class="card-img-top" src="' + post.picture + '" alt=""' + post.title + ' / Image"">';
   }
   div.innerHTML += '<div class="card-body">' +
   '<h4 class="card-title">' + post.title + '</h4>' +
