@@ -3,6 +3,11 @@
 /// read_post:    Read a post, returns a JSON object (teacher, title, text, club, picture)
 /// update_post:  Update a post, returns a boolean, whether it was successful or not.
 /// display_post: Display a post in the HTML element given by the second argument, returns null.
+
+var post;
+var key;
+var err;
+
 function write_post(title, text, club, picture) {
   key = firebase.database().ref().child('posts').push().key;
   firebase.database().ref('users/' + firebase.auth().currentUser.uid).once('value').then(function(snapshot) {
