@@ -55,11 +55,8 @@ function display_post(key, parent) {
   post = read_post(key);
   console.log(post);
   div = document.createElement('div');
-<<<<<<< HEAD
-  div.innerHTML = '<div class="card text-white bg-primary mb-3" style="max-width: 33.333333%;">' +
-=======
   div.innerHTML = '<div class="card col-6">' +
->>>>>>> 134013d65a61295677ddd874474e44d66e12b24b
+
   '<div class="card-header">' + post.club + ' / ' + post.teacher + '</div>';
   if (post.picture !== null) {
     div.innerHTML += '<img class="card-img-top" src="' + post.picture + '" alt=""' + post.title + ' / Image"">';

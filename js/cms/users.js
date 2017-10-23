@@ -2,6 +2,9 @@
 /// user_user:   Log in to a user, returns a boolean, whether it was successful or not.
 /// leave_user:  Logs out of the user, returns a boolean, whether it was successful or not.
 /// create_user: Creates a user and logs into it, returns a boolean, whether it was successful or not.
+
+var err;
+
 function use_user(email, password) {
   err = false;
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {

@@ -9,3 +9,10 @@ var config = {
 };
 
 firebase.initializeApp(config);
+
+console.log('Firebase should be ready to go ;)');
+
+console.log('      ___          __   ___      . ___     ___      __   ___  __  ___  __   ' +
+'|  | |__      /\  |__) |__  |\ | \'  |     |__  \_/ |__) |__  |__)  |  /__`  ' +
+'|/\| |___    /~~\ |  \ |___ | \|    |     |___ / \ |    |___ |  \  |  .__/ .' +
+'                                                                            ');
