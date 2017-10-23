@@ -9,3 +9,4 @@ This is a project to make a more thought out, better designed and more functiona
 - Normalize (css) - Browser support
 - Firebase (js) - CMS functionality
 - Material.io (css) - Icons
+- Parallax.js (js) - Parallax functionality
