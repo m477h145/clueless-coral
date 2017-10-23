@@ -13,6 +13,6 @@ firebase.initializeApp(config);
 console.log('Firebase should be ready to go ;)');
 
 console.log('      ___          __   ___      . ___     ___      __   ___  __  ___  __   ');
-console.log('|  | |__      /\  |__) |__  |\ | \'  |     |__  \_/ |__) |__  |__)  |  /__` ');
-console.log('|/\| |___    /~~\ |  \ |___ | \|    |     |___ / \ |    |___ |  \  |  .__/ .');
+console.log('|  | |__      /\  |__) |__  |\ | \'  |     |__  \\_/ |__) |__  |__)  |  /__` ');
+console.log('|/\\| |___    /~~\ |  \ |___ | \\|    |     |___ / \ |    |___ |  \  |  .__/ .');
 console.log('                                                                            ');

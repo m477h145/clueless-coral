@@ -4,9 +4,7 @@
 /// update_post:  Update a post, returns a boolean, whether it was successful or not.
 /// display_post: Display a post in the HTML element given by the second argument, returns null.
 
-var post;
-var key;
-var err;
+var post, key, err;
 
 function write_post(title, text, club, picture) {
   key = firebase.database().ref().child('posts').push().key;
