@@ -1,12 +1,12 @@
 // Functions
-/// user_user:  Log in to a user, returns a boolean, whether it was successful or not.
-/// leave_user: Logs out of the user, returns a boolean, whether it was successful or not.
-
+/// user_user:   Log in to a user, returns a boolean, whether it was successful or not.
+/// leave_user:  Logs out of the user, returns a boolean, whether it was successful or not.
+/// create_user: Creates a user and logs into it, returns a boolean, whether it was successful or not.
 function use_user(email, password) {
-  var err = false;
+  err = false;
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    errorCode = error.code;
+    errorMessage = error.message;
     err = true;
   });
   if (err) {
@@ -20,10 +20,10 @@ function use_user(email, password) {
 }
 
 function leave_user() {
-  var err = false;
+  err = false;
   firebase.auth().signOut().then(function() {}).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    errorCode = error.code;
+    errorMessage = error.message;
     err = true;
   });
   if (err) {
@@ -32,6 +32,23 @@ function leave_user() {
     return false;
   } else {
     console.log('Successfully logged into ' + email + ' without any apparent errors.');
+    return true;
+  }
+}
+
+function create_user(email, password) {
+  err = false;
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    errorCode = error.code;
+    errorMessage = error.message;
+    err = true;
+  });
+  if (err) {
+    alert('There was an error creating the user ' + email + ', code: ' + errorCode.toString() + ', message: ' + errorMessage);
+    console.error('Recieved a ' + errorCode.toString() + ' "' + errorMessage + '" while logging out.');
+    return false;
+  } else {
+    console.log('Successfully created user ' + email + ' without any apparent errors.');
     return true;
   }
 }

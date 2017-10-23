@@ -3,9 +3,13 @@
 /// read_post:    Read a post, returns a JSON object (teacher, title, text, club, picture)
 /// update_post:  Update a post, returns a boolean, whether it was successful or not.
 /// display_post: Display a post in the HTML element given by the second argument, returns null.
+
+var post;
+var key;
+var err;
+
 function write_post(title, text, club, picture) {
   key = firebase.database().ref().child('posts').push().key;
-  var name;
   firebase.database().ref('users/' + firebase.auth().currentUser.uid).once('value').then(function(snapshot) {
     name = snapshot.val().display
   });
@@ -20,7 +24,6 @@ function write_post(title, text, club, picture) {
 }
 
 function read_post(key) {
-  var post;
   firebase.database().ref('posts/' + key).once('value').then(function(snapshot) {
     post = snapshot.val();
     //console.log(post);
@@ -34,7 +37,6 @@ function update_post(key, title, text, club, picture) {
   if (reference == null) {
     return false;
   } else {
-    var name;
     firebase.database().ref('users/' + firebase.auth().currentUser.uid).once('value').then(function(snapshot) {
       name = snapshot.val().display
     });
@@ -51,8 +53,13 @@ function update_post(key, title, text, club, picture) {
 
 function display_post(key, parent) {
   post = read_post(key);
+  console.log(post);
   div = document.createElement('div');
+<<<<<<< HEAD
   div.innerHTML = '<div class="card text-white bg-primary mb-3" style="max-width: 33.333333%;">' +
+=======
+  div.innerHTML = '<div class="card col-6">' +
+>>>>>>> 134013d65a61295677ddd874474e44d66e12b24b
   '<div class="card-header">' + post.club + ' / ' + post.teacher + '</div>';
   if (post.picture !== null) {
     div.innerHTML += '<img class="card-img-top" src="' + post.picture + '" alt=""' + post.title + ' / Image"">';
